@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau:wght@100;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  color: #fff;
+  font-family: 'ysabeau', sans-serif;
+  background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('/assets/images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+     background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('/assets/images/bg.jpg');
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     color: #fff;
+   }
+}
+
+Nav a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  font-weight: 300;
+}
+
+Nav a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+@media screen and (max-width: 999px) {
+  Nav a::before{
+visibility: hidden;
+}
+}
+
+Nav a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+
+
+Nav a:hover{
+  color: rgba(188, 197, 188, 0.63);
+}
+
+Nav{
+  position: fixed;
+  font-size: larger;
+  font-family: 'ysabeau', sans-serif;
+  line-height: normal;
+  font-style: normal;
+}
+
+@media screen and (max-width: 768px) {
+  Nav{
+    font-size: small;
+    font-family: 'ysabeau', sans-serif;
+    line-height: normal;
+    font-style: normal;
+    gap: 1;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  Nav{
+    font-size: 14px;
+    font-family: 'ysabeau', sans-serif;
+    line-height: normal;
+    font-style: normal;
+    gap: 1;
+  }
+}
+
+.airpepe a{
+  font-size: 30px;
+  font-weight:bold;
+}
+
+@media screen and (max-width: 768px) {
+  .airpepe a{
+    /* font-size: 20px; */
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .airpepe .logo-image{
+    visibility: visible;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+  }
+}
+
+
+
+.btn-span button{
+  width: 160px;
+  padding: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .btn-span button{
+    padding: 3px;
+    width: 100px;
+  }
+}
+
+.btn-span button:hover{
+  background-color: rgba(28, 185, 67, 0.199);
+  border-color: green;
+  color: #fff;
+}
+
+@media screen and (max-width: 999px) {
+  .btn-span button{
+    visibility: hidden;
+  }
+} 
+
+.page{
+  display: flex;
+  justify-content: center;
+
+}
+
+/* ===================================
+          HERO
+====================================== */
+
+.hero .hero-text{
+  font-weight: bolder;
+}
+
+.hero-container{
+  position: relative;
+}
+
+.hero-icons{
+  padding: 25px 25px 25px;
+ 
+}
+
+.hero-icons .github{
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+.hero-icons .github:hover{
+  transform: rotate(45deg);
+  transition: transform .5s ease-in-out;
+  color: rgba(188, 197, 188, 0.63);
+}
+
+.hero-icons .reddit{
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+  
+}
+
+.hero-icons .reddit:hover{
+  transform: rotate(45deg);
+  transition: transform .5s ease-in-out;
+  color: rgba(188, 197, 188, 0.63);
+}
+
+.hero-icons .telegram{
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+.hero-icons .telegram:hover{
+  transform: rotate(45deg);
+  transition: transform .5s ease-in-out;
+  color: rgba(188, 197, 188, 0.63);
+}
+
+.hero-icons .twitter{
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+.hero-icons .twitter:hover{
+  transform: rotate(45deg);
+  transition: transform .5s ease-in-out;
+  color: rgba(188, 197, 188, 0.63);
+}
+
+
+.hero-buttons .btn{
+  margin-right: 30px;
+  padding: 10px 10px 10px 10px;
+  width: 150px;
+    
+}
+
+
+@media screen and (min-width: 393px) {
+  .hero-buttons .btn{
+    margin-top: 25px;
+    width: 100px;
+      
+  }
+} 
+
+.coin-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coin-wrapper > .btn{
+  width: 350px;
+  height: 50px;
+  
+  
+}
+
+.coin-wrapper > .btn > a{
+  text-decoration: none;
+  color: #fff;
+  font-family: 'ysabeau', sans-serif;
+  letter-spacing: 5px;
+  font-size: large;
+  
+}
+
+.coin-wrapper > .btn:hover{
+ background-color: rgba(28, 185, 67, 0.199);
+ border-color: green;
+}
+
+.coin-wrapper > .btn > img {
+  display: flex;
+  float: right;
+}
+
+@media screen and (max-width: 991px) {
+  .coin-wrapper > .btn{
+    width: 350px;
+    height: 50px;
+    margin-bottom: 3px;
+  }
+}
